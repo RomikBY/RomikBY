@@ -18,4 +18,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/my-server:latest
+          tags: ${{secrets.DOCKER_LOGIN}}/my-server:v1
