@@ -14,9 +14,9 @@ jobs:
           docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: docker build
         run: |
-          docker build -t romiki912/myserver:${{ GITHUB_RUN_ID }} .
+          docker build -t romiki912/myserver:${{ GITHUB_RUN_NUMBER }} .
       
       - name: docker push
         run: |
-          docker push romiki912/myserver: ${{ GITHUB_RUN_ID }}
+          docker push romiki912/myserver: ${{ GITHUB_RUN_NUMBER }}
       
