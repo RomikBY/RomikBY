@@ -14,8 +14,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: ${{secrets.DOCKER_LOGIN}}/my-server:v1
+        uses: |
+          - docker build -t ${{ secrets.DOCKER_LOGIN }}/my-server:v1 .
