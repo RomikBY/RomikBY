@@ -14,5 +14,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push
-        uses: |
+        run: |
           - docker build -t ${{ secrets.DOCKER_LOGIN }}/my-server:v1 .
