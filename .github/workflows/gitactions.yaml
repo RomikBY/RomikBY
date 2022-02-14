@@ -15,4 +15,8 @@ jobs:
 
       - name: Build and push
         run: |
-          - docker build -t ${{ secrets.DOCKER_LOGIN }}/my-server:v1 .
+          - docker build -t romiki912/my-server:v1 .
+
+      - name: Push to Docker Hub
+        run: |
+          - docker push romiki912/my-server:v1
