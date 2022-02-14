@@ -15,9 +15,9 @@ jobs:
 
       - name: docker build
         run: |
-          docker build -t romiki912/myserver:$GITHUB_RUN_ID .
+          docker build -t romiki912/my-server:$GITHUB_RUN_ID .
       
       - name: docker push
         run: |
-          docker push romiki912/myserver:$GITHUB_RUN_ID
+          docker push romiki912/my-server:$GITHUB_RUN_ID
       
